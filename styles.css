@@ -24,7 +24,7 @@ h1{
     border-radius: 15px;
     background-color: #95D2B3;
     justify-content: space-between;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 10px 10px 15px #aaaaaa;
 }
 
 .container .data-survey{
@@ -83,11 +83,12 @@ h1{
     border-collapse: collapse;
     height: 20px;
     text-align: left;
-    padding: 0 10px;
+    padding: 5px 10px;
 }
 
 .container .table{
     flex: 1;
     border: 1px solid black;
     padding-left: 50px;
+    font-size: 14px;
 }

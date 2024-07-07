@@ -3,6 +3,7 @@ myButton.addEventListener('click', processData)
 
 const myForm = document.getElementById('data-survey')
 
+
 function processData(event) {
     event.preventDefault()
     const tBody = document.getElementById('inputData')
@@ -47,7 +48,6 @@ function processData(event) {
         const noSmokeData = document.getElementById('no')
         const noSmokeValue = noSmokeData.value
         dataSmoke.textContent = noSmokeValue
-        console.log(noSmokeValue)
     }
 
     // Cigar Variant
@@ -64,15 +64,17 @@ function processData(event) {
     for (let i = 0; i < result.length; i++){
         brandValue += result[i]+'; '
     }
-    console.log(brandValue)
     dataBrand.textContent = brandValue
 
-
-    addData.appendChild(dataName)
-    addData.appendChild(dataAge)
-    addData.appendChild(dataGender)
-    addData.appendChild(dataSmoke)
-    addData.appendChild(dataBrand)
-    tBody.appendChild(addData)
+    if (dataName.textContent == '' || dataAge.textContent == '' || dataGender.textContent == '' || dataSmoke.textContent == '' || dataBrand.textContent == ''){
+        alert('All data must be filled in')
+    } else {
+        addData.appendChild(dataName)
+        addData.appendChild(dataAge)
+        addData.appendChild(dataGender)
+        addData.appendChild(dataSmoke)
+        addData.appendChild(dataBrand)
+        tBody.appendChild(addData)
+    }
     myForm.reset()
 }
